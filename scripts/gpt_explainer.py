@@ -4,7 +4,7 @@ from huggingface_hub import InferenceClient
 # 🔐 Hugging Face Inference Client
 client = InferenceClient(
     model="HuggingFaceH4/zephyr-7b-alpha",
-    hugging_key=st.secrets["Hugging_face_key"]
+    token=st.secrets["Hugging_face_key"]
 )
 
 def get_gpt_explanation(text: str) -> str:
@@ -29,4 +29,5 @@ def get_gpt_explanation(text: str) -> str:
 
     except Exception as e:
         return f"⚠️ Error while generating explanation: {str(e)}"
+
 
