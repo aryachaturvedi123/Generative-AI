@@ -5,36 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fairpress - Get Started</title>
   <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #121212; /* black background */
-    color: #ffffff; /* white text */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-}
-h1 {
-    font-size: 2.5em;
-    color: #ff4081; /* pink accent */
-}
-p {
-    font-size: 1.2em;
-    color: #cccccc; /* light gray */
-}
-.button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #ff4081; /* pink button */
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 1em;
-}
-.button:hover {
-    background: #e91e63;
-}
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #121212; /* black background */
+        color: #ffffff; /* white text */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: #ff4081; /* pink accent */
+    }
+
+    p {
+        font-size: 1.2em;
+        color: #cccccc; /* light gray */
+    }
+
+    .button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #ff4081; /* pink button */
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 1em;
+    }
+
+    .button:hover {
+        background: #e91e63;
+    }
+
+    /* Floating cubes animation */
+    .cube {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: rgba(255, 64, 129, 0.4);
+        animation: float 10s infinite;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-100vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Fairpress</h1>
+  <p>Your AI-powered tool to detect and fight misinformation</p>
+  <a href="main.html" class="button">Get Started</a>
+
+  <!-- Random floating cubes -->
+  <div class="cube" style="left:10%; animation-duration: 8s;"></div>
+  <div class="cube" style="left:30%; animation-duration: 12s;"></div>
+  <div class="cube" style="left:50%; animation-duration: 10s;"></div>
+  <div class="cube" style="left:70%; animation-duration: 15s;"></div>
+  <div class="cube" style="left:90%; animation-duration: 9s;"></div>
+</body>
+</html>
