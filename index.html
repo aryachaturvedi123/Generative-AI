@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fairpress</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+      background: #0f0f0f;
+      overflow: hidden;
+      color: white;
+    }
+
+    /* Floating cubes animation */
+    .cube {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      animation: float 10s infinite linear;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .container {
+      text-align: center;
+      z-index: 10;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ffffff;
+      overflow: hidden;
+      border-right: .15em solid #ff4081;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .1em;
+      animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #ff4081 }
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: #ccc;
+    }
+
+    .btn {
+      margin-top: 2rem;
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(45deg, #ff4081, #ff77a9);
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0px 4px 15px rgba(255, 64, 129, 0.5);
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 6px 20px rgba(255, 64, 129, 0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating cubes -->
+  <div class="cube" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="cube" style="left: 30%; animation-delay: 2s;"></div>
+  <div class="cube" style="left: 50%; animation-delay: 4s;"></div>
+  <div class="cube" style="left: 70%; animation-delay: 6s;"></div>
+  <div class="cube" style="left: 90%; animation-delay: 8s;"></div>
+
+  <div class="container">
+    <h1>Fairpress</h1>
+    <p>Discover and detect biases. Fairpress makes reporting transparent, reliable, and fair.</p>
+    <a href="https://generative-ai-aouwc4chj5hgr68cjezgdq.streamlit.app/" class="btn">Get Started</a>
+  </div>
+
+</body>
+</html>

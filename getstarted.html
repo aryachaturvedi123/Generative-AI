@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fairpress</title>
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      color: white;
+      position: relative;
+    }
+
+    /* Floating cubes background */
+    .cube {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      animation: float 10s infinite;
+      border-radius: 4px;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #ffffff;
+      overflow: hidden;
+      border-right: .15em solid #ff4081;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .1em;
+      animation: typing 3.5s steps(30, end), blink .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: #ff4081; }
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #cccccc;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #ff4081;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1em;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background: #e91e63;
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating cubes -->
+  <div class="cube" style="left:10%; animation-duration:12s;"></div>
+  <div class="cube" style="left:30%; animation-duration:15s;"></div>
+  <div class="cube" style="left:50%; animation-duration:10s;"></div>
+  <div class="cube" style="left:70%; animation-duration:18s;"></div>
+  <div class="cube" style="left:90%; animation-duration:20s;"></div>
+
+  <!-- Content -->
+  <div>
+    <h1>Fairpress</h1>
+    <p>Discover and detect biases. Fairpress makes reporting transparent, reliable, and fair.</p>
+    <a href="getstarted.html" class="button">Get Started</a>
+  </div>
+</body>
+</html>
