@@ -30,8 +30,8 @@ Media bias affects public perception and trust. Manual detection is slow and sub
 
 ## ⚡ How to Run  
 ```bash
-git clone https://github.com/yourusername/FAIRPRESS.git
-cd FAIRPRESS
+git clone https://github.com/yourusername/Generative-AI.git
+cd Generative-AI
 pip install -r requirements.txt
 streamlit run app.py
 
